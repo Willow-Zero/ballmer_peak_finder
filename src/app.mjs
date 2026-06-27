@@ -15,6 +15,9 @@ app.listen(port, err => {
   console.log(`Server is running on ${port}`);
 });
 
+app.use(express.static("public"))
+
+
 app.get('/', function(req, res) {
     res.render("index")
 });
